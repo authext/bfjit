@@ -47,8 +47,8 @@ int main(int argc, char **argv)
     auto bytes{ make_unique<uint8_t[]>(opts.size) };
     ifstream file(opts.file_name);
 
-    const auto  t{ bfjit::lex(file) };
-    const auto  a{ bfjit::parse(begin(t), end(t)) };
+    const auto t{ bfjit::lex(file) };
+    const auto a{ bfjit::parse(begin(t), end(t)) };
 
     a.match
     ( [](const bfjit::parse_error& pe)
