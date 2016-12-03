@@ -1,0 +1,112 @@
+\hypertarget{classbfjit_1_1token}{}\section{bfjit\+:\+:token Class Reference}
+\label{classbfjit_1_1token}\index{bfjit\+::token@{bfjit\+::token}}
+
+
+A class that represents a single token extracted from a stream.  
+
+
+
+
+{\ttfamily \#include $<$token.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96}{type} \+: std\+::uint\+\_\+fast8\+\_\+t \{ \newline
+\hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a1798e8c3621ca53d9e3a80d257306000}{type\+::\+L\+E\+SS}, 
+\hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96ae7e72355289e404b762d4cf88824d23b}{type\+::\+G\+R\+E\+A\+T\+ER}, 
+\hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a883acd43c77567e1c3baced84ccf6ed7}{type\+::\+P\+L\+US}, 
+\hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96affc0d9b54a1fe677c4c9e6b050e67c81}{type\+::\+M\+I\+N\+US}, 
+\newline
+\hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a40679521b5da0954b705341a2859f782}{type\+::\+D\+OT}, 
+\hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a4d9b3e9fc12849d060371eb65154c751}{type\+::\+C\+O\+M\+MA}, 
+\hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96ad500138bf8f61d4b0b80413f4b76a82a}{type\+::\+L\+B\+R\+A\+C\+K\+ET}, 
+\hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a270adbd249f9997adc3208e92a57e066}{type\+::\+R\+B\+R\+A\+C\+K\+ET}, 
+\newline
+\hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a62bd5a4afef994ba01e631cbf00f85be}{type\+::\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+}
+ \}\begin{DoxyCompactList}\small\item\em An enum that contains all possible types of tokens. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classbfjit_1_1token_ac79751d52b4c7d1e3651d9e4cc541641}{}\label{classbfjit_1_1token_ac79751d52b4c7d1e3651d9e4cc541641} 
+\hyperlink{classbfjit_1_1token_ac79751d52b4c7d1e3651d9e4cc541641}{token} (const \hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96}{type} \&\hyperlink{classbfjit_1_1token_a110492faa8b37b72a99aca257e584b9b}{ty}, const \hyperlink{classbfjit_1_1position}{position} \&\hyperlink{classbfjit_1_1token_aaebe0e1d3ab07f029478e13f7497a213}{pos}) noexcept
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given the type and position. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1token_a28e5edcefe7171cf2bb0da417e38e81a}{}\label{classbfjit_1_1token_a28e5edcefe7171cf2bb0da417e38e81a} 
+\hyperlink{classbfjit_1_1token_a28e5edcefe7171cf2bb0da417e38e81a}{token} (const \hyperlink{classbfjit_1_1token}{token} \&src) noexcept=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1token_a8e179dcaf1201498e5b2399d8f9a3481}{}\label{classbfjit_1_1token_a8e179dcaf1201498e5b2399d8f9a3481} 
+\hyperlink{classbfjit_1_1token_a8e179dcaf1201498e5b2399d8f9a3481}{token} (\hyperlink{classbfjit_1_1token}{token} \&\&src) noexcept=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing temporary object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1token_a5f5b1bec19166c1eeeaa3d6ac9c854f0}{}\label{classbfjit_1_1token_a5f5b1bec19166c1eeeaa3d6ac9c854f0} 
+\hyperlink{classbfjit_1_1token_a5f5b1bec19166c1eeeaa3d6ac9c854f0}{$\sim$token} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Destroys the object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1token_a110492faa8b37b72a99aca257e584b9b}{}\label{classbfjit_1_1token_a110492faa8b37b72a99aca257e584b9b} 
+const \hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96}{type} \& \hyperlink{classbfjit_1_1token_a110492faa8b37b72a99aca257e584b9b}{ty} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the type of this token. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1token_aaebe0e1d3ab07f029478e13f7497a213}{}\label{classbfjit_1_1token_aaebe0e1d3ab07f029478e13f7497a213} 
+const \hyperlink{classbfjit_1_1position}{position} \& \hyperlink{classbfjit_1_1token_aaebe0e1d3ab07f029478e13f7497a213}{pos} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the position of this token in the stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that represents a single token extracted from a stream. 
+
+This class contains the type and position information of a token.~\newline
+Like other \hyperlink{namespacebfjit}{bfjit} classes, objects of this class are {\bfseries immutable}. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96}{}\label{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96} 
+\index{bfjit\+::token@{bfjit\+::token}!type@{type}}
+\index{type@{type}!bfjit\+::token@{bfjit\+::token}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily enum \hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96}{bfjit\+::token\+::type} \+: std\+::uint\+\_\+fast8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+An enum that contains all possible types of tokens. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+SS@{L\+E\+SS}!bfjit\+::token@{bfjit\+::token}}\index{bfjit\+::token@{bfjit\+::token}!L\+E\+SS@{L\+E\+SS}}}\hypertarget{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a1798e8c3621ca53d9e3a80d257306000}{}\label{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a1798e8c3621ca53d9e3a80d257306000} 
+L\+E\+SS&Represents the {\ttfamily $<$} character. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+R\+E\+A\+T\+ER@{G\+R\+E\+A\+T\+ER}!bfjit\+::token@{bfjit\+::token}}\index{bfjit\+::token@{bfjit\+::token}!G\+R\+E\+A\+T\+ER@{G\+R\+E\+A\+T\+ER}}}\hypertarget{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96ae7e72355289e404b762d4cf88824d23b}{}\label{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96ae7e72355289e404b762d4cf88824d23b} 
+G\+R\+E\+A\+T\+ER&Represents the {\ttfamily $>$} character. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+US@{P\+L\+US}!bfjit\+::token@{bfjit\+::token}}\index{bfjit\+::token@{bfjit\+::token}!P\+L\+US@{P\+L\+US}}}\hypertarget{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a883acd43c77567e1c3baced84ccf6ed7}{}\label{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a883acd43c77567e1c3baced84ccf6ed7} 
+P\+L\+US&Represents the {\ttfamily +} character. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+I\+N\+US@{M\+I\+N\+US}!bfjit\+::token@{bfjit\+::token}}\index{bfjit\+::token@{bfjit\+::token}!M\+I\+N\+US@{M\+I\+N\+US}}}\hypertarget{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96affc0d9b54a1fe677c4c9e6b050e67c81}{}\label{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96affc0d9b54a1fe677c4c9e6b050e67c81} 
+M\+I\+N\+US&Represents the {\ttfamily -\/} character. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+OT@{D\+OT}!bfjit\+::token@{bfjit\+::token}}\index{bfjit\+::token@{bfjit\+::token}!D\+OT@{D\+OT}}}\hypertarget{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a40679521b5da0954b705341a2859f782}{}\label{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a40679521b5da0954b705341a2859f782} 
+D\+OT&Represents the {\ttfamily .}character. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+O\+M\+MA@{C\+O\+M\+MA}!bfjit\+::token@{bfjit\+::token}}\index{bfjit\+::token@{bfjit\+::token}!C\+O\+M\+MA@{C\+O\+M\+MA}}}\hypertarget{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a4d9b3e9fc12849d060371eb65154c751}{}\label{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a4d9b3e9fc12849d060371eb65154c751} 
+C\+O\+M\+MA&Represents the {\ttfamily ,} character. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+B\+R\+A\+C\+K\+ET@{L\+B\+R\+A\+C\+K\+ET}!bfjit\+::token@{bfjit\+::token}}\index{bfjit\+::token@{bfjit\+::token}!L\+B\+R\+A\+C\+K\+ET@{L\+B\+R\+A\+C\+K\+ET}}}\hypertarget{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96ad500138bf8f61d4b0b80413f4b76a82a}{}\label{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96ad500138bf8f61d4b0b80413f4b76a82a} 
+L\+B\+R\+A\+C\+K\+ET&Represents the {\ttfamily \mbox{[}} character. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+B\+R\+A\+C\+K\+ET@{R\+B\+R\+A\+C\+K\+ET}!bfjit\+::token@{bfjit\+::token}}\index{bfjit\+::token@{bfjit\+::token}!R\+B\+R\+A\+C\+K\+ET@{R\+B\+R\+A\+C\+K\+ET}}}\hypertarget{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a270adbd249f9997adc3208e92a57e066}{}\label{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a270adbd249f9997adc3208e92a57e066} 
+R\+B\+R\+A\+C\+K\+ET&Represents the {\ttfamily \mbox{]}} character. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+@{\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+}!bfjit\+::token@{bfjit\+::token}}\index{bfjit\+::token@{bfjit\+::token}!\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+@{\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+}}}\hypertarget{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a62bd5a4afef994ba01e631cbf00f85be}{}\label{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96a62bd5a4afef994ba01e631cbf00f85be} 
+\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+&Number of enum entries. {\bfseries I\+N\+V\+A\+L\+ID V\+A\+L\+UE} \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/token.\+hpp\item 
+src/token.\+cpp\end{DoxyCompactItemize}

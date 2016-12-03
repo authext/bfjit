@@ -1,0 +1,25 @@
+#ifndef CONFIG_HPP
+#define CONFIG_HPP
+
+
+#define BFJIT_VERSION_MAJOR @BFJIT_VERSION_MAJOR@
+#define BFJIT_VERSION_MINOR @BFJIT_VERSION_MINOR@
+
+#define BFJIT_VERSION "@BFJIT_VERSION_MAJOR@.@BFJIT_VERSION_MINOR@"
+
+
+// Architectures
+#define ARCH_X86    @ARCH_X86@
+#define ARCH_ARM    @ARCH_ARM@
+
+#define TARGET_ARCH @TARGET_ARCH@
+
+
+// OS's
+#define OS_WINDOWS @OS_WINDOWS@
+#define OS_UNIX    @OS_UNIX@
+
+#define TARGET_OS @TARGET_OS@
+
+
+#endif

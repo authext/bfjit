@@ -1,0 +1,170 @@
+\hypertarget{namespacebfjit}{}\section{bfjit Namespace Reference}
+\label{namespacebfjit}\index{bfjit@{bfjit}}
+
+
+Namespace that contains all bfjit-\/related classes and functions.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classbfjit_1_1ast}{ast}
+\begin{DoxyCompactList}\small\item\em Abstract base class of all other ast classes. \end{DoxyCompactList}\item 
+class \hyperlink{classbfjit_1_1io__ast}{io\+\_\+ast}
+\begin{DoxyCompactList}\small\item\em A class that represent a single I/O instruction. \end{DoxyCompactList}\item 
+class \hyperlink{classbfjit_1_1jit__function}{jit\+\_\+function}
+\begin{DoxyCompactList}\small\item\em A class that represents code ready for execution. \end{DoxyCompactList}\item 
+class \hyperlink{classbfjit_1_1loop__ast}{loop\+\_\+ast}
+\begin{DoxyCompactList}\small\item\em A class that represents a brainfuck loop. \end{DoxyCompactList}\item 
+class \hyperlink{classbfjit_1_1movement__ast}{movement\+\_\+ast}
+\begin{DoxyCompactList}\small\item\em A class that represents a movement instruction. \end{DoxyCompactList}\item 
+class \hyperlink{classbfjit_1_1mutation__ast}{mutation\+\_\+ast}
+\begin{DoxyCompactList}\small\item\em A class that represents a single (cellmutation) instruction. \end{DoxyCompactList}\item 
+class \hyperlink{classbfjit_1_1parse__error}{parse\+\_\+error}
+\item 
+class \hyperlink{classbfjit_1_1position}{position}
+\begin{DoxyCompactList}\small\item\em A class that tracks position of a token in a stream. \end{DoxyCompactList}\item 
+class \hyperlink{classbfjit_1_1token}{token}
+\begin{DoxyCompactList}\small\item\em A class that represents a single token extracted from a stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{}\label{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623} 
+using \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} = mapbox\+::util\+::variant$<$ \hyperlink{classbfjit_1_1movement__ast}{movement\+\_\+ast}, \hyperlink{classbfjit_1_1mutation__ast}{mutation\+\_\+ast}, \hyperlink{classbfjit_1_1io__ast}{io\+\_\+ast}, mapbox\+::util\+::recursive\+\_\+wrapper$<$ \hyperlink{classbfjit_1_1loop__ast}{loop\+\_\+ast} $>$$>$
+\begin{DoxyCompactList}\small\item\em A typedef that unites all ast types into a single variant. \end{DoxyCompactList}\item 
+using \hyperlink{namespacebfjit_ac770ef0753b4d7d6bd5800262ba97f25}{parse\+\_\+result} = mapbox\+::util\+::variant$<$ \hyperlink{classbfjit_1_1parse__error}{parse\+\_\+error}, std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$ $>$
+\begin{DoxyCompactList}\small\item\em A typedef that represents the parsing result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacebfjit_ab8c637e2dc36f385821956bc174d4030}{}\label{namespacebfjit_ab8c637e2dc36f385821956bc174d4030} 
+std\+::ostream \& \hyperlink{namespacebfjit_ab8c637e2dc36f385821956bc174d4030}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1movement__ast_a3aa723a03d76c31e1e88be817670701f}{movement\+\_\+ast\+::type} \&ty)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1movement__ast_a3aa723a03d76c31e1e88be817670701f}{movement\+\_\+ast\+::type} object. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_ae08ef2d872d3d9132f0c721fa8489178}{}\label{namespacebfjit_ae08ef2d872d3d9132f0c721fa8489178} 
+std\+::ostream \& \hyperlink{namespacebfjit_ae08ef2d872d3d9132f0c721fa8489178}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1movement__ast}{movement\+\_\+ast} \&mast)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1token}{token} object. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_ae267e9d951306b902f07d1c72413e58d}{}\label{namespacebfjit_ae267e9d951306b902f07d1c72413e58d} 
+std\+::ostream \& \hyperlink{namespacebfjit_ae267e9d951306b902f07d1c72413e58d}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9}{mutation\+\_\+ast\+::type} \&ty)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9}{mutation\+\_\+ast\+::type} object. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_a5cb30f43ec85193cfda8b2169d776527}{}\label{namespacebfjit_a5cb30f43ec85193cfda8b2169d776527} 
+std\+::ostream \& \hyperlink{namespacebfjit_a5cb30f43ec85193cfda8b2169d776527}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1mutation__ast}{mutation\+\_\+ast} \&mast)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1mutation__ast}{mutation\+\_\+ast} object. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_a51292e2e92a0bbf2bc1930d5437693e0}{}\label{namespacebfjit_a51292e2e92a0bbf2bc1930d5437693e0} 
+std\+::ostream \& \hyperlink{namespacebfjit_a51292e2e92a0bbf2bc1930d5437693e0}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1io__ast_ae0b93ddde6f86aed45dd22b72d290414}{io\+\_\+ast\+::type} \&ty)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1io__ast_ae0b93ddde6f86aed45dd22b72d290414}{io\+\_\+ast\+::type} object. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_af52c593484b4d6f0fe4febf43811b027}{}\label{namespacebfjit_af52c593484b4d6f0fe4febf43811b027} 
+std\+::ostream \& \hyperlink{namespacebfjit_af52c593484b4d6f0fe4febf43811b027}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1io__ast}{io\+\_\+ast} \&ioast)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1io__ast}{io\+\_\+ast} object. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_a845e544a129fbae6cd93460021922bea}{}\label{namespacebfjit_a845e544a129fbae6cd93460021922bea} 
+std\+::ostream \& \hyperlink{namespacebfjit_a845e544a129fbae6cd93460021922bea}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1loop__ast}{loop\+\_\+ast} \&ioast)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1loop__ast}{loop\+\_\+ast} object. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_ae0af2cb10b3785b75f51e846b46fbc00}{}\label{namespacebfjit_ae0af2cb10b3785b75f51e846b46fbc00} 
+void {\bfseries prologue} (jit\+\_\+function\+::impl $\ast$impl)
+\item 
+\hypertarget{namespacebfjit_aa8e79a40d19e72d22ade985a63055392}{}\label{namespacebfjit_aa8e79a40d19e72d22ade985a63055392} 
+void {\bfseries epilogue} (jit\+\_\+function\+::impl $\ast$impl)
+\item 
+\hypertarget{namespacebfjit_a2074dd9fc2ff8ea0960e66bdb2bb9a5a}{}\label{namespacebfjit_a2074dd9fc2ff8ea0960e66bdb2bb9a5a} 
+void {\bfseries movement} (jit\+\_\+function\+::impl $\ast$impl, const \hyperlink{classbfjit_1_1movement__ast}{movement\+\_\+ast} \&m\+\_\+ast)
+\item 
+\hypertarget{namespacebfjit_a73bb08eeefd210b9252ae57d5e920956}{}\label{namespacebfjit_a73bb08eeefd210b9252ae57d5e920956} 
+void {\bfseries mutation} (jit\+\_\+function\+::impl $\ast$impl, const \hyperlink{classbfjit_1_1mutation__ast}{mutation\+\_\+ast} \&m\+\_\+ast)
+\item 
+\hypertarget{namespacebfjit_af8ac98f27907450e44251e60653b8226}{}\label{namespacebfjit_af8ac98f27907450e44251e60653b8226} 
+void {\bfseries io} (jit\+\_\+function\+::impl $\ast$impl, const \hyperlink{classbfjit_1_1io__ast}{io\+\_\+ast} \&i\+\_\+ast)
+\item 
+\hypertarget{namespacebfjit_a0cca116c9c12075bcd8866d50251327d}{}\label{namespacebfjit_a0cca116c9c12075bcd8866d50251327d} 
+void {\bfseries loop} (jit\+\_\+function\+::impl $\ast$impl, const \hyperlink{classbfjit_1_1loop__ast}{loop\+\_\+ast} \&l\+\_\+ast)
+\item 
+std\+::vector$<$ \hyperlink{classbfjit_1_1token}{token} $>$ \hyperlink{namespacebfjit_afc8d63bb8e810f0a8386783924340045}{lex} (std\+::istream \&stream)
+\begin{DoxyCompactList}\small\item\em A function that reads \hyperlink{classbfjit_1_1token}{token}s from a stream. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$ \hyperlink{namespacebfjit_a6d6a3107cfe22399215c398dd5d25d85}{optimize} (std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$\+::const\+\_\+iterator begin\+\_\+it, std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$\+::const\+\_\+iterator end\+\_\+it)
+\begin{DoxyCompactList}\small\item\em Optimizes the input \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast}\%. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_ae336474650e07d599dae9e197f7565a2}{}\label{namespacebfjit_ae336474650e07d599dae9e197f7565a2} 
+std\+::ostream \& \hyperlink{namespacebfjit_ae336474650e07d599dae9e197f7565a2}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1parse__error_af750138d196890dcdc543c9fb1b7705b}{parse\+\_\+error\+::type} \&ty)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1parse__error_af750138d196890dcdc543c9fb1b7705b}{parse\+\_\+error\+::type} object. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_a06209a97706aaee7244404eabb4a1399}{}\label{namespacebfjit_a06209a97706aaee7244404eabb4a1399} 
+std\+::ostream \& \hyperlink{namespacebfjit_a06209a97706aaee7244404eabb4a1399}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1parse__error}{parse\+\_\+error} \&pe)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1parse__error}{parse\+\_\+error} object. \end{DoxyCompactList}\item 
+\hyperlink{namespacebfjit_ac770ef0753b4d7d6bd5800262ba97f25}{parse\+\_\+result} \hyperlink{namespacebfjit_add88f8f5cb8f1e6fe6d1ab62b2d5b9b4}{parse} (std\+::vector$<$ \hyperlink{classbfjit_1_1token}{token} $>$\+::const\+\_\+iterator begin\+\_\+it, std\+::vector$<$ \hyperlink{classbfjit_1_1token}{token} $>$\+::const\+\_\+iterator end\+\_\+it)
+\begin{DoxyCompactList}\small\item\em A function that parses tokens into ast. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_a339fdcb6eed0bc209bbf18598cbd4084}{}\label{namespacebfjit_a339fdcb6eed0bc209bbf18598cbd4084} 
+std\+::ostream \& \hyperlink{namespacebfjit_a339fdcb6eed0bc209bbf18598cbd4084}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1position}{position} \&p)
+\begin{DoxyCompactList}\small\item\em A functions that pretty-\/prints a \hyperlink{classbfjit_1_1position}{position} object to a stream. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_a5d7d8fa478e49f0143fc57fc6e28ffba}{}\label{namespacebfjit_a5d7d8fa478e49f0143fc57fc6e28ffba} 
+std\+::ostream \& \hyperlink{namespacebfjit_a5d7d8fa478e49f0143fc57fc6e28ffba}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96}{token\+::type} \&ty)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1token_a2486a3e583fb48f3863c4eb5c32cdd96}{token\+::type} object. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_aa0300e35ddafd8014da5627a332ad3a9}{}\label{namespacebfjit_aa0300e35ddafd8014da5627a332ad3a9} 
+std\+::ostream \& \hyperlink{namespacebfjit_aa0300e35ddafd8014da5627a332ad3a9}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbfjit_1_1token}{token} \&tok)
+\begin{DoxyCompactList}\small\item\em A function that pretty-\/prints a \hyperlink{classbfjit_1_1token}{token} object. \end{DoxyCompactList}\item 
+\hypertarget{namespacebfjit_a99ffba753326db1168413603b2ad07c5}{}\label{namespacebfjit_a99ffba753326db1168413603b2ad07c5} 
+vector$<$ \hyperlink{classbfjit_1_1token}{token} $>$\+::const\+\_\+iterator {\bfseries parse\+\_\+helper} (vector$<$ \hyperlink{classbfjit_1_1token}{token} $>$\+::const\+\_\+iterator begin\+\_\+it, vector$<$ \hyperlink{classbfjit_1_1token}{token} $>$\+::const\+\_\+iterator end\+\_\+it, vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$ \&vast)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace that contains all bfjit-\/related classes and functions. 
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacebfjit_ac770ef0753b4d7d6bd5800262ba97f25}{}\label{namespacebfjit_ac770ef0753b4d7d6bd5800262ba97f25} 
+\index{bfjit@{bfjit}!parse\+\_\+result@{parse\+\_\+result}}
+\index{parse\+\_\+result@{parse\+\_\+result}!bfjit@{bfjit}}
+\subsubsection{\texorpdfstring{parse\+\_\+result}{parse\_result}}
+{\footnotesize\ttfamily using \hyperlink{namespacebfjit_ac770ef0753b4d7d6bd5800262ba97f25}{bfjit\+::parse\+\_\+result} = typedef mapbox\+::util\+::variant $<$ \hyperlink{classbfjit_1_1parse__error}{parse\+\_\+error} , std\+::vector$<$\hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast}$>$ $>$}
+
+
+
+A typedef that represents the parsing result. 
+
+If parsing fails, the variant is set to an appropriate error message. If the parsing fails, the variant is set to a vector containing the ast. 
+
+\subsection{Function Documentation}
+\hypertarget{namespacebfjit_afc8d63bb8e810f0a8386783924340045}{}\label{namespacebfjit_afc8d63bb8e810f0a8386783924340045} 
+\index{bfjit@{bfjit}!lex@{lex}}
+\index{lex@{lex}!bfjit@{bfjit}}
+\subsubsection{\texorpdfstring{lex()}{lex()}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{classbfjit_1_1token}{token} $>$ bfjit\+::lex (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{stream }\end{DoxyParamCaption})}
+
+
+
+A function that reads \hyperlink{classbfjit_1_1token}{token}s from a stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The stream to read. \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacebfjit_a6d6a3107cfe22399215c398dd5d25d85}{}\label{namespacebfjit_a6d6a3107cfe22399215c398dd5d25d85} 
+\index{bfjit@{bfjit}!optimize@{optimize}}
+\index{optimize@{optimize}!bfjit@{bfjit}}
+\subsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$ bfjit\+::optimize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$\+::const\+\_\+iterator}]{begin\+\_\+it,  }\item[{std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$\+::const\+\_\+iterator}]{end\+\_\+it }\end{DoxyParamCaption})}
+
+
+
+Optimizes the input \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast}\%. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+\_\+it} & An iterator to the beginning of ast to be optimized. \\
+\hline
+{\em end\+\_\+it} & An iterator to the end of ast to be optimized. \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacebfjit_add88f8f5cb8f1e6fe6d1ab62b2d5b9b4}{}\label{namespacebfjit_add88f8f5cb8f1e6fe6d1ab62b2d5b9b4} 
+\index{bfjit@{bfjit}!parse@{parse}}
+\index{parse@{parse}!bfjit@{bfjit}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \hyperlink{namespacebfjit_ac770ef0753b4d7d6bd5800262ba97f25}{parse\+\_\+result} bfjit\+::parse (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{classbfjit_1_1token}{token} $>$\+::const\+\_\+iterator}]{begin\+\_\+it,  }\item[{std\+::vector$<$ \hyperlink{classbfjit_1_1token}{token} $>$\+::const\+\_\+iterator}]{end\+\_\+it }\end{DoxyParamCaption})}
+
+
+
+A function that parses tokens into ast. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+\_\+it} & An iterator to the beginning of a token sequence. \\
+\hline
+{\em end\+\_\+it} & An iterator to the end of a token sequence. \\
+\hline
+\end{DoxyParams}

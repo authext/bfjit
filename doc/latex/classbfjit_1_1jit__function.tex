@@ -1,0 +1,61 @@
+\hypertarget{classbfjit_1_1jit__function}{}\section{bfjit\+:\+:jit\+\_\+function Class Reference}
+\label{classbfjit_1_1jit__function}\index{bfjit\+::jit\+\_\+function@{bfjit\+::jit\+\_\+function}}
+
+
+A class that represents code ready for execution.  
+
+
+
+
+{\ttfamily \#include $<$jit.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classbfjit_1_1jit__function_af1fc2ce0a88008b14b83af58850ba986}{}\label{classbfjit_1_1jit__function_af1fc2ce0a88008b14b83af58850ba986} 
+\hyperlink{classbfjit_1_1jit__function_af1fc2ce0a88008b14b83af58850ba986}{jit\+\_\+function} (const \hyperlink{classbfjit_1_1jit__function}{jit\+\_\+function} \&src)=delete
+\begin{DoxyCompactList}\small\item\em \hyperlink{classbfjit_1_1jit__function}{jit\+\_\+function} cannot be copied. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1jit__function_a5d0022ddb357ff4671fd7b531a6a50c8}{}\label{classbfjit_1_1jit__function_a5d0022ddb357ff4671fd7b531a6a50c8} 
+\hyperlink{classbfjit_1_1jit__function_a5d0022ddb357ff4671fd7b531a6a50c8}{jit\+\_\+function} (\hyperlink{classbfjit_1_1jit__function}{jit\+\_\+function} \&\&src)=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing temporary object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1jit__function_a01b04a52531720d33b15710f9439175b}{}\label{classbfjit_1_1jit__function_a01b04a52531720d33b15710f9439175b} 
+\hyperlink{classbfjit_1_1jit__function_a01b04a52531720d33b15710f9439175b}{$\sim$jit\+\_\+function} ()
+\begin{DoxyCompactList}\small\item\em Destroys the object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1jit__function_a656a098b23685e1d27b9257b2981a046}{}\label{classbfjit_1_1jit__function_a656a098b23685e1d27b9257b2981a046} 
+void \hyperlink{classbfjit_1_1jit__function_a656a098b23685e1d27b9257b2981a046}{operator()} () const
+\begin{DoxyCompactList}\small\item\em Actually runs the generated code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classbfjit_1_1jit__function}{jit\+\_\+function} \hyperlink{classbfjit_1_1jit__function_a38edcf55a13c5766b8b832abcf19ac2b}{make} (std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$\+::const\+\_\+iterator begin\+\_\+it, std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$\+::const\+\_\+iterator end\+\_\+it, std\+::uint8\+\_\+t $\ast$bytes)
+\begin{DoxyCompactList}\small\item\em {\itshape The} function for generating a \hyperlink{classbfjit_1_1jit__function}{jit\+\_\+function}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that represents code ready for execution. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbfjit_1_1jit__function_a38edcf55a13c5766b8b832abcf19ac2b}{}\label{classbfjit_1_1jit__function_a38edcf55a13c5766b8b832abcf19ac2b} 
+\index{bfjit\+::jit\+\_\+function@{bfjit\+::jit\+\_\+function}!make@{make}}
+\index{make@{make}!bfjit\+::jit\+\_\+function@{bfjit\+::jit\+\_\+function}}
+\subsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily static \hyperlink{classbfjit_1_1jit__function}{jit\+\_\+function} bfjit\+::jit\+\_\+function\+::make (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$\+::const\+\_\+iterator}]{begin\+\_\+it,  }\item[{std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$\+::const\+\_\+iterator}]{end\+\_\+it,  }\item[{std\+::uint8\+\_\+t $\ast$}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\itshape The} function for generating a \hyperlink{classbfjit_1_1jit__function}{jit\+\_\+function}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+\_\+it} & An iterator to the beginning of the code to jit. \\
+\hline
+{\em end\+\_\+it} & An iterator to the end of the code to jit. \\
+\hline
+{\em bytes} & Pointer to the cell heap. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jit.\+hpp\end{DoxyCompactItemize}

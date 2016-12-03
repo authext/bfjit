@@ -1,0 +1,53 @@
+\hypertarget{classbfjit_1_1ast}{}\section{bfjit\+:\+:ast Class Reference}
+\label{classbfjit_1_1ast}\index{bfjit\+::ast@{bfjit\+::ast}}
+
+
+Abstract base class of all other ast classes.  
+
+
+
+
+{\ttfamily \#include $<$ast.\+hpp$>$}
+
+Inheritance diagram for bfjit\+:\+:ast\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbfjit_1_1ast}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classbfjit_1_1ast_a031935f8ba5af7185e8d75d67c1973dc}{}\label{classbfjit_1_1ast_a031935f8ba5af7185e8d75d67c1973dc} 
+virtual \hyperlink{classbfjit_1_1ast_a031935f8ba5af7185e8d75d67c1973dc}{$\sim$ast} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Destroys the object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1ast_a748b75683a33e11ad87b907ba0118c3d}{}\label{classbfjit_1_1ast_a748b75683a33e11ad87b907ba0118c3d} 
+const \hyperlink{classbfjit_1_1position}{position} \& \hyperlink{classbfjit_1_1ast_a748b75683a33e11ad87b907ba0118c3d}{pos} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the position of this instruction in the stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classbfjit_1_1ast_a6b8483df6623f32b184f6cf43fb6bcc1}{}\label{classbfjit_1_1ast_a6b8483df6623f32b184f6cf43fb6bcc1} 
+\hyperlink{classbfjit_1_1ast_a6b8483df6623f32b184f6cf43fb6bcc1}{ast} (const \hyperlink{classbfjit_1_1position}{position} \&\hyperlink{classbfjit_1_1ast_a748b75683a33e11ad87b907ba0118c3d}{pos}) noexcept
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given its position. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1ast_aac08f2c318e8ccce75bd5028b48eaa91}{}\label{classbfjit_1_1ast_aac08f2c318e8ccce75bd5028b48eaa91} 
+\hyperlink{classbfjit_1_1ast_aac08f2c318e8ccce75bd5028b48eaa91}{ast} (const \hyperlink{classbfjit_1_1ast}{ast} \&src) noexcept=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1ast_a256a788db24653878f8e935945ddf0ed}{}\label{classbfjit_1_1ast_a256a788db24653878f8e935945ddf0ed} 
+\hyperlink{classbfjit_1_1ast_a256a788db24653878f8e935945ddf0ed}{ast} (\hyperlink{classbfjit_1_1ast}{ast} \&\&src) noexcept=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing temporary object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classbfjit_1_1ast_a376d0d491063ec18be68d2e22b361d89}{}\label{classbfjit_1_1ast_a376d0d491063ec18be68d2e22b361d89} 
+\hyperlink{classbfjit_1_1position}{position} \hyperlink{classbfjit_1_1ast_a376d0d491063ec18be68d2e22b361d89}{m\+\_\+pos}
+\begin{DoxyCompactList}\small\item\em The position of ast in the stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class of all other ast classes. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast.\+hpp\item 
+src/ast.\+cpp\end{DoxyCompactItemize}

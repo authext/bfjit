@@ -1,0 +1,69 @@
+\hypertarget{classbfjit_1_1position}{}\section{bfjit\+:\+:position Class Reference}
+\label{classbfjit_1_1position}\index{bfjit\+::position@{bfjit\+::position}}
+
+
+A class that tracks position of a token in a stream.  
+
+
+
+
+{\ttfamily \#include $<$position.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classbfjit_1_1position_a6319989e5821e4a159ed1870e8ba656e}{}\label{classbfjit_1_1position_a6319989e5821e4a159ed1870e8ba656e} 
+using \hyperlink{classbfjit_1_1position_a6319989e5821e4a159ed1870e8ba656e}{line\+\_\+type} = std\+::uint\+\_\+fast32\+\_\+t
+\begin{DoxyCompactList}\small\item\em A simple typedef for line numbers. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1position_a472af3de5d41775deff6293c0ab6450b}{}\label{classbfjit_1_1position_a472af3de5d41775deff6293c0ab6450b} 
+using \hyperlink{classbfjit_1_1position_a472af3de5d41775deff6293c0ab6450b}{column\+\_\+type} = std\+::uint\+\_\+fast32\+\_\+t
+\begin{DoxyCompactList}\small\item\em A simple typedef for column numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbfjit_1_1position_a4e33b31f04bc22264a0e11e53658b823}{position} (const \hyperlink{classbfjit_1_1position_a6319989e5821e4a159ed1870e8ba656e}{line\+\_\+type} \&\hyperlink{classbfjit_1_1position_a97065ff829263ae30ee20789d2a4d08f}{line}, const \hyperlink{classbfjit_1_1position_a472af3de5d41775deff6293c0ab6450b}{column\+\_\+type} \&\hyperlink{classbfjit_1_1position_ad6bc7ed8fea430bbd3932c213cd86786}{column}) noexcept
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given the line and column information. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1position_ab8678e29129d57b4a3f562e1f0b12d01}{}\label{classbfjit_1_1position_ab8678e29129d57b4a3f562e1f0b12d01} 
+\hyperlink{classbfjit_1_1position_ab8678e29129d57b4a3f562e1f0b12d01}{position} (const \hyperlink{classbfjit_1_1position}{position} \&src) noexcept=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1position_a49cf6faea19cdf8341bbe2321f283352}{}\label{classbfjit_1_1position_a49cf6faea19cdf8341bbe2321f283352} 
+\hyperlink{classbfjit_1_1position_a49cf6faea19cdf8341bbe2321f283352}{position} (\hyperlink{classbfjit_1_1position}{position} \&\&src) noexcept=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing temporary object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1position_ad9099933119dc51c1254de3bb114baa5}{}\label{classbfjit_1_1position_ad9099933119dc51c1254de3bb114baa5} 
+\hyperlink{classbfjit_1_1position_ad9099933119dc51c1254de3bb114baa5}{$\sim$position} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Destroys the object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1position_a97065ff829263ae30ee20789d2a4d08f}{}\label{classbfjit_1_1position_a97065ff829263ae30ee20789d2a4d08f} 
+const \hyperlink{classbfjit_1_1position_a6319989e5821e4a159ed1870e8ba656e}{line\+\_\+type} \& \hyperlink{classbfjit_1_1position_a97065ff829263ae30ee20789d2a4d08f}{line} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the line number. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1position_ad6bc7ed8fea430bbd3932c213cd86786}{}\label{classbfjit_1_1position_ad6bc7ed8fea430bbd3932c213cd86786} 
+const \hyperlink{classbfjit_1_1position_a472af3de5d41775deff6293c0ab6450b}{column\+\_\+type} \& \hyperlink{classbfjit_1_1position_ad6bc7ed8fea430bbd3932c213cd86786}{column} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the column number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that tracks position of a token in a stream. 
+
+This class contains the line and column information of a token.~\newline
+Both the line and column count start from 1, instead of 0.~\newline
+Like other \hyperlink{namespacebfjit}{bfjit} classes, objects of this class are {\bfseries immutable}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbfjit_1_1position_a4e33b31f04bc22264a0e11e53658b823}{}\label{classbfjit_1_1position_a4e33b31f04bc22264a0e11e53658b823} 
+\index{bfjit\+::position@{bfjit\+::position}!position@{position}}
+\index{position@{position}!bfjit\+::position@{bfjit\+::position}}
+\subsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily bfjit\+::position\+::position (\begin{DoxyParamCaption}\item[{const \hyperlink{classbfjit_1_1position_a6319989e5821e4a159ed1870e8ba656e}{line\+\_\+type} \&}]{line,  }\item[{const \hyperlink{classbfjit_1_1position_a472af3de5d41775deff6293c0ab6450b}{column\+\_\+type} \&}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+Constructs a new object, given the line and column information. 
+
+\begin{DoxyRemark}{Remarks}
+Line and column should both start from 1, not from 0. 
+\end{DoxyRemark}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/position.\+hpp\item 
+src/position.\+cpp\end{DoxyCompactItemize}

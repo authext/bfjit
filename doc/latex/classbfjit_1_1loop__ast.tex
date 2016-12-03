@@ -1,0 +1,47 @@
+\hypertarget{classbfjit_1_1loop__ast}{}\section{bfjit\+:\+:loop\+\_\+ast Class Reference}
+\label{classbfjit_1_1loop__ast}\index{bfjit\+::loop\+\_\+ast@{bfjit\+::loop\+\_\+ast}}
+
+
+A class that represents a brainfuck loop.  
+
+
+
+
+{\ttfamily \#include $<$ast.\+hpp$>$}
+
+Inheritance diagram for bfjit\+:\+:loop\+\_\+ast\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbfjit_1_1loop__ast}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classbfjit_1_1loop__ast_ad30dcb55d7c06077ee2dafb1a378c5e7}{}\label{classbfjit_1_1loop__ast_ad30dcb55d7c06077ee2dafb1a378c5e7} 
+\hyperlink{classbfjit_1_1loop__ast_ad30dcb55d7c06077ee2dafb1a378c5e7}{loop\+\_\+ast} (const \hyperlink{classbfjit_1_1position}{position} \&\hyperlink{classbfjit_1_1ast_a748b75683a33e11ad87b907ba0118c3d}{pos}, const std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$ \&\hyperlink{classbfjit_1_1loop__ast_ad1418cddc65f555771317745baa12ca3}{inner})
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given its position and body. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1loop__ast_a755299be080720eb34d97cbd6f6d490f}{}\label{classbfjit_1_1loop__ast_a755299be080720eb34d97cbd6f6d490f} 
+\hyperlink{classbfjit_1_1loop__ast_a755299be080720eb34d97cbd6f6d490f}{loop\+\_\+ast} (const \hyperlink{classbfjit_1_1loop__ast}{loop\+\_\+ast} \&src)=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1loop__ast_a6d317229408e8ce7b77a779854228643}{}\label{classbfjit_1_1loop__ast_a6d317229408e8ce7b77a779854228643} 
+\hyperlink{classbfjit_1_1loop__ast_a6d317229408e8ce7b77a779854228643}{loop\+\_\+ast} (\hyperlink{classbfjit_1_1loop__ast}{loop\+\_\+ast} \&\&src) noexcept=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing temporary object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1loop__ast_aae5b7064e86488f937b255307bd7d5d3}{}\label{classbfjit_1_1loop__ast_aae5b7064e86488f937b255307bd7d5d3} 
+\hyperlink{classbfjit_1_1loop__ast_aae5b7064e86488f937b255307bd7d5d3}{$\sim$loop\+\_\+ast} () noexcept override=default
+\begin{DoxyCompactList}\small\item\em Destroys the object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1loop__ast_ad1418cddc65f555771317745baa12ca3}{}\label{classbfjit_1_1loop__ast_ad1418cddc65f555771317745baa12ca3} 
+const std\+::vector$<$ \hyperlink{namespacebfjit_ad9bbdb76861e57928b1bc7695c2c0623}{combined\+\_\+ast} $>$ \& \hyperlink{classbfjit_1_1loop__ast_ad1418cddc65f555771317745baa12ca3}{inner} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the instructions containted within the loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A class that represents a brainfuck loop. 
+
+Like other \hyperlink{namespacebfjit}{bfjit} classes, objects of this class are {\bfseries immutable}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast.\+hpp\item 
+src/ast.\+cpp\end{DoxyCompactItemize}

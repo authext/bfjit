@@ -1,0 +1,85 @@
+\hypertarget{classbfjit_1_1mutation__ast}{}\section{bfjit\+:\+:mutation\+\_\+ast Class Reference}
+\label{classbfjit_1_1mutation__ast}\index{bfjit\+::mutation\+\_\+ast@{bfjit\+::mutation\+\_\+ast}}
+
+
+A class that represents a single (cellmutation) instruction.  
+
+
+
+
+{\ttfamily \#include $<$ast.\+hpp$>$}
+
+Inheritance diagram for bfjit\+:\+:mutation\+\_\+ast\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbfjit_1_1mutation__ast}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9}{type} \+: std\+::uint\+\_\+fast8\+\_\+t \{ \hyperlink{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9a38924f2227ebf15f4bdc6dca5c5eca91}{type\+::\+I\+NC}, 
+\hyperlink{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9a38344a4d87bb35ec197f26fad338b6ab}{type\+::\+D\+EC}, 
+\hyperlink{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9a62bd5a4afef994ba01e631cbf00f85be}{type\+::\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+}
+ \}\begin{DoxyCompactList}\small\item\em An enum that contains all possible types of mutation instructions. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classbfjit_1_1mutation__ast_aa4c4051e73b3e286a7587264de13c6fb}{}\label{classbfjit_1_1mutation__ast_aa4c4051e73b3e286a7587264de13c6fb} 
+\hyperlink{classbfjit_1_1mutation__ast_aa4c4051e73b3e286a7587264de13c6fb}{mutation\+\_\+ast} (const \hyperlink{classbfjit_1_1position}{position} \&\hyperlink{classbfjit_1_1ast_a748b75683a33e11ad87b907ba0118c3d}{pos}, const \hyperlink{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9}{type} \&\hyperlink{classbfjit_1_1mutation__ast_a8f80ac1d17d4c77c1e5032f970e15e8e}{ty}, const size\+\_\+t \&\hyperlink{classbfjit_1_1mutation__ast_a2ee0d76e3a8aabee083952aea21035a5}{by}) noexcept
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given its position, type and the number of mutations to perform. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1mutation__ast_a13a88c3bab4ad64b00c5f00cb553a4df}{}\label{classbfjit_1_1mutation__ast_a13a88c3bab4ad64b00c5f00cb553a4df} 
+\hyperlink{classbfjit_1_1mutation__ast_a13a88c3bab4ad64b00c5f00cb553a4df}{mutation\+\_\+ast} (const \hyperlink{classbfjit_1_1mutation__ast}{mutation\+\_\+ast} \&src) noexcept=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1mutation__ast_a79a438bf768cea7e786ff38c971dd9aa}{}\label{classbfjit_1_1mutation__ast_a79a438bf768cea7e786ff38c971dd9aa} 
+\hyperlink{classbfjit_1_1mutation__ast_a79a438bf768cea7e786ff38c971dd9aa}{mutation\+\_\+ast} (\hyperlink{classbfjit_1_1mutation__ast}{mutation\+\_\+ast} \&\&src) noexcept=default
+\begin{DoxyCompactList}\small\item\em Constructs a new object, given an existing temporary object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1mutation__ast_ae92ede7339103c1552ce76a4578c6bf7}{}\label{classbfjit_1_1mutation__ast_ae92ede7339103c1552ce76a4578c6bf7} 
+\hyperlink{classbfjit_1_1mutation__ast_ae92ede7339103c1552ce76a4578c6bf7}{$\sim$mutation\+\_\+ast} () noexcept override=default
+\begin{DoxyCompactList}\small\item\em Destroys the object. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1mutation__ast_a8f80ac1d17d4c77c1e5032f970e15e8e}{}\label{classbfjit_1_1mutation__ast_a8f80ac1d17d4c77c1e5032f970e15e8e} 
+const \hyperlink{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9}{type} \& \hyperlink{classbfjit_1_1mutation__ast_a8f80ac1d17d4c77c1e5032f970e15e8e}{ty} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the type of this mutation instruction. \end{DoxyCompactList}\item 
+\hypertarget{classbfjit_1_1mutation__ast_a2ee0d76e3a8aabee083952aea21035a5}{}\label{classbfjit_1_1mutation__ast_a2ee0d76e3a8aabee083952aea21035a5} 
+const size\+\_\+t \& \hyperlink{classbfjit_1_1mutation__ast_a2ee0d76e3a8aabee083952aea21035a5}{by} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the amount which the cell needs to change {\itshape by}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A class that represents a single (cellmutation) instruction. 
+
+Like other \hyperlink{namespacebfjit}{bfjit} classes, objects of this class are {\bfseries immutable}. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9}{}\label{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9} 
+\index{bfjit\+::mutation\+\_\+ast@{bfjit\+::mutation\+\_\+ast}!type@{type}}
+\index{type@{type}!bfjit\+::mutation\+\_\+ast@{bfjit\+::mutation\+\_\+ast}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily enum \hyperlink{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9}{bfjit\+::mutation\+\_\+ast\+::type} \+: std\+::uint\+\_\+fast8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+An enum that contains all possible types of mutation instructions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+NC@{I\+NC}!bfjit\+::mutation\+\_\+ast@{bfjit\+::mutation\+\_\+ast}}\index{bfjit\+::mutation\+\_\+ast@{bfjit\+::mutation\+\_\+ast}!I\+NC@{I\+NC}}}\hypertarget{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9a38924f2227ebf15f4bdc6dca5c5eca91}{}\label{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9a38924f2227ebf15f4bdc6dca5c5eca91} 
+I\+NC&Represents a {\itshape increase value} instruction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+EC@{D\+EC}!bfjit\+::mutation\+\_\+ast@{bfjit\+::mutation\+\_\+ast}}\index{bfjit\+::mutation\+\_\+ast@{bfjit\+::mutation\+\_\+ast}!D\+EC@{D\+EC}}}\hypertarget{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9a38344a4d87bb35ec197f26fad338b6ab}{}\label{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9a38344a4d87bb35ec197f26fad338b6ab} 
+D\+EC&Represents a {\itshape decrease value} instruction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+@{\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+}!bfjit\+::mutation\+\_\+ast@{bfjit\+::mutation\+\_\+ast}}\index{bfjit\+::mutation\+\_\+ast@{bfjit\+::mutation\+\_\+ast}!\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+@{\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+}}}\hypertarget{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9a62bd5a4afef994ba01e631cbf00f85be}{}\label{classbfjit_1_1mutation__ast_a4a35ab616dab7944deedac4300f473e9a62bd5a4afef994ba01e631cbf00f85be} 
+\+\_\+\+\_\+\+L\+A\+S\+T\+\_\+\+\_\+&Number of enum entries. {\bfseries I\+N\+V\+A\+L\+ID V\+A\+L\+UE} \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast.\+hpp\item 
+src/ast.\+cpp\end{DoxyCompactItemize}
