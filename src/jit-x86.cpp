@@ -83,38 +83,29 @@ namespace bfjit
         assembled.emplace_back(0x56); // push esi
         assembled.emplace_back(0x57); // push edi
 
+        const auto put_le_dword = [&assembled](const uintptr_t& ptr_int)
+        {
+            assembled.emplace_back(static_cast<uint8_t>(
+                (ptr_int >> 0) & 0xFF));
+            assembled.emplace_back(static_cast<uint8_t>(
+                (ptr_int >> 8) & 0xFF));
+            assembled.emplace_back(static_cast<uint8_t>(
+                (ptr_int >> 16) & 0xFF));
+            assembled.emplace_back(static_cast<uint8_t>(
+                (ptr_int >> 24) & 0xFF));
+        };
+
         const auto bytes_int{ reinterpret_cast<uintptr_t>(impl->m_bytes) };
         assembled.emplace_back(0xBB); // mov ebx, bytes
-        assembled.emplace_back(static_cast<uint8_t>(
-            (bytes_int >>  0) & 0xFF));
-        assembled.emplace_back(static_cast<uint8_t>(
-            (bytes_int >>  8) & 0xFF));
-        assembled.emplace_back(static_cast<uint8_t>(
-            (bytes_int >> 16) & 0xFF));
-        assembled.emplace_back(static_cast<uint8_t>(
-            (bytes_int >> 24) & 0xFF));
+        put_le_dword(bytes_int);
 
         const auto getchar_int { reinterpret_cast<uintptr_t>(getchar) };
         assembled.emplace_back(0xBE); // mov esi, getchar
-        assembled.emplace_back(static_cast<uint8_t>(
-            (getchar_int >>  0) & 0xFF));
-        assembled.emplace_back(static_cast<uint8_t>(
-            (getchar_int >>  8) & 0xFF));
-        assembled.emplace_back(static_cast<uint8_t>(
-            (getchar_int >> 16) & 0xFF));
-        assembled.emplace_back(static_cast<uint8_t>(
-            (getchar_int >> 24) & 0xFF));
+        put_le_dword(getchar_int);
 
         const auto putchar_int { reinterpret_cast<uintptr_t>(putchar) };
         assembled.emplace_back(0xBF); // mov edi, putchar
-        assembled.emplace_back(static_cast<uint8_t>(
-            (putchar_int >>  0) & 0xFF));
-        assembled.emplace_back(static_cast<uint8_t>(
-            (putchar_int >>  8) & 0xFF));
-        assembled.emplace_back(static_cast<uint8_t>(
-            (putchar_int >> 16) & 0xFF));
-        assembled.emplace_back(static_cast<uint8_t>(
-            (putchar_int >> 24) & 0xFF));
+        put_le_dword(putchar_int);
     }
 
 
@@ -219,7 +210,7 @@ namespace bfjit
         );
 
         assembled.emplace_back(0xE9); // jmp start
-        int32_t diff = start_idx - assembled.size() - 4;
+        const auto diff{ start_idx - assembled.size() - 4 };
         assembled.emplace_back(static_cast<uint8_t>((diff >>  0) & 0xFF));
         assembled.emplace_back(static_cast<uint8_t>((diff >>  8) & 0xFF));
         assembled.emplace_back(static_cast<uint8_t>((diff >> 16) & 0xFF));
@@ -228,7 +219,7 @@ namespace bfjit
         const auto end_idx { assembled.size() };
 
         // Fill the jump from start to end
-        int32_t diff1 = end_idx - fill_idx - 4;
+        const auto diff1{ end_idx - fill_idx - 4 };
         assembled[fill_idx + 0] = static_cast<uint8_t>((diff1 >>  0) & 0xFF);
         assembled[fill_idx + 1] = static_cast<uint8_t>((diff1 >>  8) & 0xFF);
         assembled[fill_idx + 2] = static_cast<uint8_t>((diff1 >> 16) & 0xFF);
@@ -239,7 +230,8 @@ namespace bfjit
     void assemble
     ( vector<combined_ast>::const_iterator begin_it
     , vector<combined_ast>::const_iterator end_it
-    , jit_function::impl *impl)
+    , jit_function::impl *impl
+    )
     {
         for (auto it{ begin_it }; it < end_it; ++it)
         {

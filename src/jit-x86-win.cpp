@@ -28,9 +28,7 @@
 // C++ includes
 #include <iostream>
 // Windows includes
-#define WIN32_LEAN_AND_MEAN 1
-#define NO_MINMAX 1
-#include <Windows.h>
+#include "Windows.h-shim.hpp"
 
 
 namespace bfjit
