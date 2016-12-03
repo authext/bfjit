@@ -2,6 +2,10 @@
 #define CONFIG_HPP
 
 
+#undef IN
+#undef OUT
+
+
 #define BFJIT_VERSION_MAJOR @BFJIT_VERSION_MAJOR@
 #define BFJIT_VERSION_MINOR @BFJIT_VERSION_MINOR@
 
@@ -10,6 +14,7 @@
 
 // Architectures
 #define ARCH_X86    @ARCH_X86@
+#define ARCH_X86_64 @ARCH_X86_64@
 #define ARCH_ARM    @ARCH_ARM@
 
 #define TARGET_ARCH @TARGET_ARCH@

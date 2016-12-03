@@ -8,6 +8,7 @@ SET(BFJIT_VERSION_MAJOR 0)
 SET(BFJIT_VERSION_MINOR 1)
 
 SET(ARCH_X86 0)
+SET(ARCH_X86_64 1)
 SET(ARCH_ARM 16)
 
 SET(OS_WINDOWS 0)
@@ -41,7 +42,10 @@ ADD_LIBRARY("${LIB_NAME}"
     "${LIB_SRC_DIR}/jit-arm-unix.cpp"
     "${LIB_SRC_DIR}/jit-x86.cpp"
     "${LIB_SRC_DIR}/jit-x86-unix.cpp"
-    "${LIB_SRC_DIR}/jit-x86-w32.cpp"
+    "${LIB_SRC_DIR}/jit-x86-win.cpp"
+    "${LIB_SRC_DIR}/jit-x86_64.cpp"
+    "${LIB_SRC_DIR}/jit-x86_64-win.cpp"
+    "${LIB_SRC_DIR}/jit-x86_64-unix.cpp"
     "${LIB_SRC_DIR}/lex.cpp"
     "${LIB_SRC_DIR}/optimize.cpp"
     "${LIB_SRC_DIR}/parse.cpp"
